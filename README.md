@@ -1,12 +1,12 @@
-# Workshop-DiscordBot
+# Atelier-Discord-Bot
 
-Template réalisée pour un workshop organisé par l'UNG.
+Template réalisée pour un atelier organisé par l'UNG.
 
 ## Installation
 
 Commencez par cloner le repository :
 ```shell
-git clone https://github.com/ungdev/Workshop-DiscordBot
+git clone https://github.com/ungdev/Atelier-Discord-Bot
 ```
 
 Pour démarrer, il vous faut un compte Discord.
