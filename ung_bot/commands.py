@@ -10,6 +10,8 @@ if TYPE_CHECKING:
 
 
 class CommandsCog(commands.Cog):
+    """Classe contenant les commandes."""
+
     def __init__(self, bot: Bot) -> None:
         self.bot = bot  # Permet d'accéder facilement à l'instance du bot
 
@@ -20,7 +22,9 @@ class CommandsCog(commands.Cog):
         try:
             await self.bot.tree.sync()  # Synchronise les commandes globales
             for guild in self.bot.guilds:  # Boucle sur les serveurs du bot
-                await self.bot.tree.sync(guild=guild)  # Synchronise les commandes de chaque serveur
+                await self.bot.tree.sync(  # Synchronise les commandes de chaque serveur
+                    guild=guild
+                )
             await ctx.reply("Les commandes slash ont bien été synchronisées.")
         except app_commands.CommandSyncFailure as e:
             await ctx.reply(

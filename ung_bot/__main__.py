@@ -11,11 +11,11 @@ def main() -> None:
     if Path(".env").is_file():
         load_dotenv()
 
-    # Instancier la classe du bot
-    client = Bot()
+    # Instancie la classe du bot
+    bot = Bot()
 
-    # Lancer le bot
-    client.run(os.getenv("BOT_TOKEN"), reconnect=True)
+    # Lance le bot
+    bot.run(os.getenv("BOT_TOKEN"), reconnect=True)
 
 
 if __name__ == "__main__":
